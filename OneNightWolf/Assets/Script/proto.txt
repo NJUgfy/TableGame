@@ -1,0 +1,7 @@
+private const byte IS_READY_NTF = 0;
+private const byte IS_NOT_READY_NTF = 1;
+private const byte GET_READY_REQ = 2;
+private const byte GET_SEAT_REQ = 3;
+private const byte GET_SEAT_ACK = 4;
+private const byte GET_SEAT_NTF = 5;
+private const byte GET_ALL_SEAT_REQ = 6;
