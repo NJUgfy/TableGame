@@ -24,7 +24,8 @@ public class NetworkLanucher : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameType = 0;
+        roomSize = 6;
     }
 
     public void OnTypeValueChange(int n)

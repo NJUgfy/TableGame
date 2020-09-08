@@ -55,11 +55,12 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
-    <Compile Include="Assets\Script\RoomLanucher.cs" />
     <Compile Include="Assets\Script\CardEvent.cs" />
     <Compile Include="Assets\Script\RoomListManager.cs" />
+    <Compile Include="Assets\Script\UIManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\Script\VideoManager.cs" />
+    <Compile Include="Assets\Script\StateManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
@@ -71,6 +72,8 @@
     <Compile Include="Assets\Script\NetworkLanucher.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Script\FeiXingQiRoomLanucher.cs" />
+    <Compile Include="Assets\Script\CardManager.cs" />
+    <Compile Include="Assets\Script\SeatEvent.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
