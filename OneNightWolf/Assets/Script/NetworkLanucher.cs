@@ -34,14 +34,17 @@ public class NetworkLanucher : MonoBehaviourPunCallbacks
         Debug.Log("type:" + gameType);
         switch (gameType)
         {
-            case 0:
+            case 0://狼人杀
                 roomSize = 6;
                 break;
-            case 1:
+            case 1://阿瓦隆
                 roomSize = 6;
                 break;
-            case 2:
+            case 2://飞行棋
                 roomSize = 4;
+                break;
+            case 3://达芬奇密码
+                roomSize = 2;
                 break;
             default:
                 roomSize = 6;
@@ -105,10 +108,13 @@ public class NetworkLanucher : MonoBehaviourPunCallbacks
                 gameString = "(一夜狼)";
                 break;
             case 1:
-                gameString = "(井字棋)";
+                gameString = "(阿瓦隆)";
                 break;
             case 2:
                 gameString = "(飞行棋)";
+                break;
+            case 3:
+                gameString = "(达芬奇密码)";
                 break;
             default:
                 gameString = "(一夜狼)";
@@ -145,11 +151,14 @@ public class NetworkLanucher : MonoBehaviourPunCallbacks
         if (name.EndsWith("(一夜狼)"))
             PhotonNetwork.LoadLevel(1);
         else
-        if (name.EndsWith("(井字棋)"))
+        if (name.EndsWith("(阿瓦隆)"))
             PhotonNetwork.LoadLevel(1);
         else
         if (name.EndsWith("(飞行棋)"))
             PhotonNetwork.LoadLevel(2);
+        else
+        if (name.EndsWith("(达芬奇密码)"))
+            PhotonNetwork.LoadLevel(3);
         //base.OnJoinedRoom();
 
     }

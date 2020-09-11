@@ -1879,6 +1879,7 @@ public class StateManager : MonoBehaviourPunCallbacks
                 break;
             case QIANG_DAO_SELECT_ACK://17
                 if (isMaster) break;
+                if (startRole != Role.QIANG_DAO) break;
                 object[] oDataRecv17 = (object[])obj.CustomData;
                 int actorID17 = (int)oDataRecv17[0];
                 int seatID17_1 = (int)oDataRecv17[1];
@@ -1900,6 +1901,8 @@ public class StateManager : MonoBehaviourPunCallbacks
                 SendRPC(DAO_DAN_GUI_SELECT_ACK, oDataSend18);
                 break;
             case DAO_DAN_GUI_SELECT_ACK://19
+                if (isMaster) break;
+                if (startRole != Role.DAO_DAN_GUI) break;
                 object[] oDataRecv19 = (object[])obj.CustomData;
                 int actorID19 = (int)oDataRecv19[0];
                 int seatID19 = (int)oDataRecv19[1];
@@ -1931,6 +1934,7 @@ public class StateManager : MonoBehaviourPunCallbacks
                 break;
             case SHI_MIAN_ZHE_ACK://22
                 if (isMaster) break;
+                if (startRole != Role.SHI_MIAN_ZHE) break;
                 object[] oDataRecv22 = (object[])obj.CustomData;
                 int actorID22 = (int)oDataRecv22[0];
                 int seatID22 = (int)oDataRecv22[1];
@@ -1959,6 +1963,7 @@ public class StateManager : MonoBehaviourPunCallbacks
                 break;
             case JIU_GUI_ACK://24
                 if (isMaster) break;
+                if (startRole != Role.JIU_GUI) break;
                 object[] oDataRecv24 = (object[])obj.CustomData;
                 int actorID24 = (int)oDataRecv24[0];
                 int seatID24_1 = (int)oDataRecv24[1];
@@ -2130,5 +2135,12 @@ public class StateManager : MonoBehaviourPunCallbacks
     {
         DataRefresh();
         UIRefresh();
+    }
+
+    public void ExitRoom()
+    {
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LeaveLobby();
+        PhotonNetwork.LoadLevel(0);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,10 +22,33 @@ public class VideoManager : MonoBehaviour
         sprite = Resources.Load("Menu/masterLoading", typeof(Sprite)) as Sprite;
     }
 
+    int GetTime()
+    {
+        return (int)(video.frameCount / video.frameRate + 0.5f);
+    }
+
+    void SkipVideo()
+    {
+        video.frame = (long)video.frameCount;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.anyKeyDown&&video!=null)
+        {
+            foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
+            {
+                bool pd = false;
+                if (keyCode == UnityEngine.KeyCode.Return) pd = true;
+                if (keyCode == UnityEngine.KeyCode.Space) pd = true;
+                if (pd)
+                {
+                    SkipVideo();
+                }
+            }
+        }
+
     }
 
     void cleanAlpha()

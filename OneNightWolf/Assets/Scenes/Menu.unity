@@ -1261,12 +1261,12 @@ VideoPlayer:
   m_RenderMode: 1
   m_AspectRatio: 2
   m_DataSource: 0
-  m_PlaybackSpeed: 10
+  m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 0
+  - 0.316
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
@@ -3218,6 +3218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614094475}
   - component: {fileID: 1614094474}
+  - component: {fileID: 1614094476}
   m_Layer: 0
   m_Name: VideoManager
   m_TagString: Untagged
@@ -3257,6 +3258,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1614094476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614094473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1 &1658019712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,9 +3976,11 @@ MonoBehaviour:
     m_Options:
     - m_Text: "\u4E00\u591C\u72FC"
       m_Image: {fileID: 0}
-    - m_Text: "\u4E95\u5B57\u68CB"
+    - m_Text: "\u963F\u74E6\u9686"
       m_Image: {fileID: 0}
     - m_Text: "\u98DE\u884C\u68CB"
+      m_Image: {fileID: 0}
+    - m_Text: "\u8FBE\u82AC\u5947\u5BC6\u7801"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

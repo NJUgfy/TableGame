@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FeiXingQi.unity
     guid: 81396f0bc823a8f4c82759b81fbbed9a
+  - enabled: 1
+    path: Assets/Scenes/DaFenQiMiMa.unity
+    guid: c06c3bc640817934e86e01f3dd571bd1
   m_configObjects: {}
